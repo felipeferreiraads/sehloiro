@@ -1,0 +1,43 @@
+header
+    width: 140px
+    height: 100vh
+    position fixed
+    top: 0
+    left: 0
+    display flex
+    .open-menu
+        width: 70px
+        height: 100%
+        padding: 50px 0
+        background: $color.gray-light
+        display flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        cursor pointer
+        span
+            writing-mode: vertical-rl
+            text-orientation: upright
+            text-transform: uppercase
+        .bars
+            width: 35%
+            height: 100px
+            display flex
+            justify-content: space-between
+            .bar
+                width: 1px
+                height 100%
+                background: $color.gray-medium
+        .circle
+            width: 15px
+            height: 15px
+            border-radius: 100%
+            background: $color.primary
+    .image
+        width: 70px
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: right

@@ -1,4 +1,4 @@
 *.psd
 !spec/*.psd
 node_modules
-psd
+yarn.lock
