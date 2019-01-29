@@ -15,10 +15,14 @@ header
         justify-content: space-between
         align-items: center
         cursor pointer
+        transition: .2s
+        &:hover
+            background: darken($color.gray-light, 10%)
         span
             writing-mode: vertical-rl
             text-orientation: upright
             text-transform: uppercase
+            letter-spacing: 2px
         .bars
             width: 35%
             height: 100px

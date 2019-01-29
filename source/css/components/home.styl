@@ -4,8 +4,9 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    padding: 0 20px
     figure
-        width 50%
+        width 52%
         padding-bottom: 10vh
         margin-bottom: 10vh
         position relative
@@ -48,5 +49,8 @@
             background: $color.gray-light
             font-size: 20px
             font-style: italic
+            transition: .2s
+            &:hover
+                background: darken($color.gray-light, 10%)
             &:not(:last-child)
                 margin-right: 10px
