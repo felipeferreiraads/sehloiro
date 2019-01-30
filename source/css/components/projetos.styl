@@ -50,21 +50,25 @@
         font-style: italic
         display block
         margin-bottom: 25px
-    .button
-        display inline-block
-        padding: 0 15px
-        line-height: 40px
-        background: $color.text
-        color: white
-        font-size: 20px
-        font-weight: 800
-        text-transform: uppercase
-        margin-right: 20px
-        transition: .2s
-        &.read-more
-            background: $color.primary
-            &:hover
-                background: darken($color.primary, 10%)
-        &:not(.read-more)
-            &:hover
-                opacity: .85
+
+.ui-button
+    display inline-block
+    padding: 0 15px
+    height: 40px
+    line-height: 40px
+    background: $color.gray-dark
+    color: white
+    font-size: 20px
+    font-weight: 800
+    text-transform: uppercase
+    margin-right: 20px
+    transition: .2s
+    border: none
+    cursor pointer
+    &.read-more
+        background: $color.primary
+        &:hover
+            background: darken($color.primary, 10%)
+    &:not(.read-more)
+        &:hover
+            opacity: .85

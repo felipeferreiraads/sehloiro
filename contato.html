@@ -12,23 +12,28 @@
 
 <body>
     <header>
-        <div class="grid">
-            <div class="open-menu">
-                <span>Menu</span>
-                <div class="bars">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-                <div class="circle"></div>
+        <div class="open-menu">
+            <span>Menu</span>
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <div class="image">
-                <img src="assets/img/menu.jpg" alt="Menu">
-            </div>
+            <div class="circle"></div>
+        </div>
+        <div class="image">
+            <img src="assets/img/menu.jpg" alt="Menu">
         </div>
     </header>
 
-    <main class="main-content">
+    <nav class="main-menu">
+        <a href="#" class="active">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Projetos</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main class="main-contact menu-switch">
         <div class="container">
             <a href="#" class="logo">
                 <img src="assets/img/logo.svg" alt="SehLoiro">
@@ -44,14 +49,14 @@
                     <input type="text" placeholder="E-mail">
                 </div>
                 <div class="grid">
-                    <div class="grid">
+                    <div class="grid no-margin">
                         <input type="text" placeholder="Cidade" class="city">
                         <select class="uf">
                             <option value="" selected hidden>UF</option>
                         </select>
                     </div>
-                    <div class="grid">
-                        <span class="label">Já possui marca?</span>
+                    <div class="grid no-margin grid-brand">
+                        <div class="label brand">Já possui marca?</div>
                         <div class="radio-group">
                             <label>
                                 <input type="radio" value="Sim">
@@ -62,6 +67,7 @@
                                 <span>Não</span>
                             </label>
                         </div>
+                        <input type="text" placeholder="Qual?" class="no-border">
                     </div>
                 </div>
                 <div class="grid">
@@ -69,29 +75,31 @@
                     <input type="text" placeholder="Possui um canal?">
                 </div>
                 <div class="grid">
-                    <span class="label">Serviços que tem interesse:</span>
-                    <label>
-                        <input type="checkbox" value="Criação de marca">
-                        <span>Criação de marca</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" value="Registro de marcas">
-                        <span>Registro de marcas</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" value="Consultoria">
-                        <span>Consultoria</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" value="Produção de Conteúdo">
-                        <span>PRodução de Conteúdo</span>
-                    </label>
+                    <span class="label interest">Serviços que tem interesse:</span>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" value="Criação de marca">
+                            <span>Criação de marca</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Registro de marcas">
+                            <span>Registro de marcas</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Consultoria">
+                            <span>Consultoria</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="Produção de Conteúdo">
+                            <span>Produção de Conteúdo</span>
+                        </label>
+                    </div>
                 </div>
                 <div class="grid">
                     <textarea placeholder="Descreva suas expectativas e considerações importantes sobre o projeto"></textarea>
                 </div>
                 <div class="bottom">
-                    <button>
+                    <button class="ui-button">
                         <span class="icon-angle-right"></span>
                         <span class="text">Solicitar orçamento</span>
                     </button>

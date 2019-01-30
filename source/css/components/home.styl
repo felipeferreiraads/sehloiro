@@ -2,14 +2,21 @@
     height: 100vh
     display flex
     flex-direction: column
-    justify-content: center
     align-items: center
     padding: 0 20px
+    +above($bp.lg)
+        justify-content: center
+    +below($bp.lg)
+        padding: 120px 20px 0
     figure
         width 52%
         padding-bottom: 10vh
         margin-bottom: 10vh
         position relative
+        +below($bp.lg)
+            width: 70%
+            padding-bottom: 5vh
+            margin-bottom: 5vh
         &::after
             content: ''
             width 30%
@@ -28,6 +35,9 @@
         margin-bottom: 10vh
         text-transform: uppercase
         letter-spacing: 5px
+        +below($bp.lg)
+            font-size: 20px
+            margin-bottom: 5vh
     p
         font-size: 25px
         color: $color.primary
@@ -38,10 +48,15 @@
         letter-spacing: 5px
         line-height: 1.2
         margin-bottom: 10vh
+        +below($bp.lg)
+            font-size: 20px
         &:first-line
             font-weight: 800
             font-style: normal
     .nav-home
+        display flex
+        +below($bp.lg)
+            display none
         a
             display inline-block
             line-height: 50px
@@ -50,6 +65,9 @@
             font-size: 20px
             font-style: italic
             transition: .2s
+            +below(1120px)
+                font-size: 18px
+                padding: 0 15px
             &:hover
                 background: darken($color.gray-light, 10%)
             &:not(:last-child)

@@ -432,7 +432,11 @@ body {
   font-size: 18px;
   color: #676767;
   overflow-x: hidden;
-  padding-left: 140px;
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    padding-left: 140px;
+  }
 }
 a {
   text-decoration: none;
@@ -513,6 +517,208 @@ figure {
 .icon-youtube:before {
   content: "\ea9d";
 }
+.main-contact {
+  padding: 100px 0;
+}
+.main-contact .logo img {
+  width: 300px;
+}
+.main-contact h2 {
+  font-size: 22px;
+  max-width: 500px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 30px 0;
+}
+.main-contact form .grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-contact form .grid:not(.no-margin) {
+  margin-bottom: 15px;
+}
+.main-contact form .grid > div {
+  width: 49%;
+}
+@media only screen and (max-width: 800px) {
+  .main-contact form .grid > div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main-contact form .grid > *:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.main-contact form input[type=text],
+.main-contact form textarea,
+.main-contact form select,
+.main-contact form .label {
+  height: 50px;
+  padding: 0 10px;
+  background: #f2f2f2;
+  display: inline-block;
+  width: 49%;
+  color: #676767;
+  border-width: 0 0 0 0;
+}
+@media only screen and (max-width: 800px) {
+  .main-contact form input[type=text],
+  .main-contact form textarea,
+  .main-contact form select,
+  .main-contact form .label {
+    width: 100%;
+  }
+}
+.main-contact form input[type=text]:not(.no-border),
+.main-contact form textarea:not(.no-border),
+.main-contact form select:not(.no-border),
+.main-contact form .label:not(.no-border) {
+  border-left: 10px solid #f7bd13;
+}
+.main-contact form input[type=text]::placeholder,
+.main-contact form textarea::placeholder,
+.main-contact form select::placeholder,
+.main-contact form .label::placeholder {
+  opacity: 1;
+}
+.main-contact form input[type=text].city,
+.main-contact form textarea.city,
+.main-contact form select.city,
+.main-contact form .label.city {
+  width: 70%;
+  margin: 0 !important;
+}
+.main-contact form input[type=text].uf,
+.main-contact form textarea.uf,
+.main-contact form select.uf,
+.main-contact form .label.uf {
+  width: 26%;
+}
+.main-contact form input[type=text].no-border,
+.main-contact form textarea.no-border,
+.main-contact form select.no-border,
+.main-contact form .label.no-border {
+  width: 150px;
+}
+@media only screen and (max-width: 1120px) {
+  .main-contact form input[type=text].no-border,
+  .main-contact form textarea.no-border,
+  .main-contact form select.no-border,
+  .main-contact form .label.no-border {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main-contact form input[type=text].no-border,
+  .main-contact form textarea.no-border,
+  .main-contact form select.no-border,
+  .main-contact form .label.no-border {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main-contact form input[type=text].no-border,
+  .main-contact form textarea.no-border,
+  .main-contact form select.no-border,
+  .main-contact form .label.no-border {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+.main-contact form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 20px;
+  resize: none;
+}
+.main-contact form .label {
+  line-height: 50px;
+  display: block;
+}
+.main-contact form .label.interest {
+  width: auto;
+}
+@media only screen and (max-width: 800px) {
+  .main-contact form .label.interest {
+    width: 100%;
+  }
+}
+.main-contact form .label.brand {
+  width: 175px;
+}
+.main-contact form label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.main-contact form label input {
+  margin-right: 5px;
+}
+.main-contact form .checkbox-group {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .main-contact form .checkbox-group {
+    flex-direction: column;
+  }
+  .main-contact form .checkbox-group > *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.main-contact form .radio-group {
+  display: flex;
+  flex: 1;
+  padding: 0 15px;
+}
+.main-contact form .radio-group > *:first-child {
+  margin-right: 10px;
+}
+.main-contact form .grid-brand > * {
+  margin-bottom: 0 !important;
+}
+.main-contact .bottom {
+  display: flex;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-contact .bottom {
+    flex-direction: column;
+  }
+  .main-contact .bottom .ui-button {
+    align-self: flex-start;
+  }
+}
+.main-contact .bottom > * {
+  margin-right: 50px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-contact .bottom > * {
+    margin: 0 0 20px 0;
+  }
+}
+.main-contact .bottom h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+.main-contact .bottom .grid {
+  justify-content: flex-start;
+}
+.main-contact .bottom .grid > * {
+  margin: 8px 8px 0 0 !important;
+  color: #f7bd13;
+}
+.main-contact .bottom a {
+  margin-top: 7px;
+  display: inline-block;
+}
 header {
   width: 140px;
   height: 100vh;
@@ -521,6 +727,11 @@ header {
   left: 0;
   display: flex;
   transition: all 0.3s ease-in;
+}
+@media only screen and (max-width: 1024px) {
+  header {
+    display: none;
+  }
 }
 header .open-menu {
   width: 70px;
@@ -575,19 +786,54 @@ header .image img {
   object-fit: cover;
   object-position: right;
 }
+.open-menu-mobile {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #f7bd13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 22px;
+}
+@media only screen and (min-width: 1024px) {
+  .open-menu-mobile {
+    display: none;
+  }
+}
 .main-home {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .main-home {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-home {
+    padding: 120px 20px 0;
+  }
 }
 .main-home figure {
   width: 52%;
   padding-bottom: 10vh;
   margin-bottom: 10vh;
   position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  .main-home figure {
+    width: 70%;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+  }
 }
 .main-home figure::after {
   content: '';
@@ -610,6 +856,12 @@ header .image img {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-home h1 {
+    font-size: 20px;
+    margin-bottom: 5vh;
+  }
+}
 .main-home p {
   font-size: 25px;
   color: #f7bd13;
@@ -621,9 +873,22 @@ header .image img {
   line-height: 1.2;
   margin-bottom: 10vh;
 }
+@media only screen and (max-width: 1024px) {
+  .main-home p {
+    font-size: 20px;
+  }
+}
 .main-home p:first-line {
   font-weight: 800;
   font-style: normal;
+}
+.main-home .nav-home {
+  display: flex;
+}
+@media only screen and (max-width: 1024px) {
+  .main-home .nav-home {
+    display: none;
+  }
 }
 .main-home .nav-home a {
   display: inline-block;
@@ -633,6 +898,12 @@ header .image img {
   font-size: 20px;
   font-style: italic;
   transition: 0.2s;
+}
+@media only screen and (max-width: 1120px) {
+  .main-home .nav-home a {
+    font-size: 18px;
+    padding: 0 15px;
+  }
 }
 .main-home .nav-home a:hover {
   background: #dadada;
@@ -653,6 +924,12 @@ header .image img {
   justify-content: center;
   padding: 20px;
   transition: all 0.3s ease-in;
+}
+@media only screen and (max-width: 1280px) {
+  .main-menu {
+    width: 250px;
+    left: -250px;
+  }
 }
 .main-menu a {
   color: #f7bd13;
@@ -906,25 +1183,28 @@ header .image img {
   display: block;
   margin-bottom: 25px;
 }
-.card-project .button {
+.ui-button {
   display: inline-block;
   padding: 0 15px;
+  height: 40px;
   line-height: 40px;
-  background: #676767;
+  background: #545454;
   color: #fff;
   font-size: 20px;
   font-weight: 800;
   text-transform: uppercase;
   margin-right: 20px;
   transition: 0.2s;
+  border: none;
+  cursor: pointer;
 }
-.card-project .button.read-more {
+.ui-button.read-more {
   background: #f7bd13;
 }
-.card-project .button.read-more:hover {
+.ui-button.read-more:hover {
   background: #e8af08;
 }
-.card-project .button:not(.read-more):hover {
+.ui-button:not(.read-more):hover {
   opacity: 0.85;
 }
 ::-webkit-scrollbar {

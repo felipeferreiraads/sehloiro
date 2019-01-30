@@ -6,6 +6,8 @@ header
     left: 0
     display flex
     transition: all .3s ease-in
+    +below($bp.lg)
+        display none
     .open-menu
         width: 70px
         height: 100%
@@ -51,3 +53,19 @@ header
             height: 100%
             object-fit: cover
             object-position: right
+
+.open-menu-mobile
+    position: absolute
+    top: 20px
+    left: 20px
+    width: 40px
+    height: 40px
+    border-radius: 100%
+    background: $color.primary
+    display flex
+    justify-content: center
+    align-items: center
+    color white
+    font-size: 22px
+    +above($bp.lg)
+        display none
