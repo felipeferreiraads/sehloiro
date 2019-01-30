@@ -3,3 +3,4 @@
  */
 
 import './components/scroll'
+import './components/menu'
