@@ -427,6 +427,9 @@ textarea {
   box-sizing: border-box;
   outline: none;
 }
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: 'Open Sans' , serif;
   font-size: 18px;
@@ -731,6 +734,7 @@ header {
 @media only screen and (max-width: 1024px) {
   header {
     display: none;
+    height: auto;
   }
 }
 header .open-menu {
@@ -925,10 +929,12 @@ header .image img {
   padding: 20px;
   transition: all 0.3s ease-in;
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1024px) {
   .main-menu {
     width: 250px;
     left: -250px;
+    justify-content: flex-start;
+    padding-top: 50px;
   }
 }
 .main-menu a {
@@ -937,6 +943,11 @@ header .image img {
   font-size: 25px;
   text-align: center;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1280px) {
+  .main-menu a {
+    font-size: 20px;
+  }
 }
 .main-menu a:not(:last-child) {
   margin-bottom: 20px;
@@ -953,26 +964,68 @@ header .image img {
 .main-media {
   padding: 100px 0 100px 100px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-media {
+    padding: 100px 20px;
+  }
+}
 .main-media .top {
   width: 100%;
   max-width: 1280px;
   padding: 0 20px 0 0;
 }
+@media only screen and (max-width: 1024px) {
+  .main-media .top {
+    padding: 0;
+  }
+}
 .main-media .grid {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (min-width: 600px) {
+  .main-media .grid {
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-media .grid {
+    flex-direction: column;
+  }
+}
 .main-media .logo {
   display: flex;
+  align-items: center;
 }
 .main-media .logo img {
   width: 300px;
+  align-self: flex-start;
+}
+@media only screen and (max-width: 1024px) {
+  .main-media .logo img {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-media .logo img {
+    width: 150px;
+  }
 }
 .main-media .logo span {
   font-size: 35px;
   font-style: italic;
   letter-spacing: 5px;
   margin-left: 5px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-media .logo span {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-media .logo span {
+    font-size: 20px;
+  }
 }
 .main-media a.button {
   display: inline-block;
@@ -983,6 +1036,18 @@ header .image img {
   font-weight: 800;
   text-transform: uppercase;
   transition: 0.2s;
+  align-self: flex-start;
+}
+@media only screen and (max-width: 1024px) {
+  .main-media a.button {
+    line-height: 40px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main-media a.button {
+    margin-top: 20px;
+  }
 }
 .main-media a.button:hover {
   opacity: 0.85;
@@ -996,16 +1061,23 @@ header .image img {
   margin-top: 30px;
   font-style: italic;
 }
+@media only screen and (max-width: 800px) {
+  .main-media p {
+    font-size: 20px;
+  }
+}
 .media-posts {
-  width: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
   margin-top: 40px;
 }
-.media-posts .column {
-  display: inline-block;
-  margin-right: 50px;
+@media only screen and (min-width: 1024px) {
+  .media-posts {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .media-posts .column {
+    margin-right: 50px;
+  }
 }
 .card-media {
   width: 400px;
@@ -1013,14 +1085,23 @@ header .image img {
   white-space: normal;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 1024px) {
+  .card-media {
+    width: 100%;
+  }
+}
 .card-media h3 {
   font-size: 22px;
   color: #f7bd13;
   font-weight: 800;
   text-transform: uppercase;
-  max-width: 400px;
   margin-bottom: 10px;
   line-height: 1.4;
+}
+@media only screen and (max-width: 1024px) {
+  .card-media h3 {
+    font-size: 18px;
+  }
 }
 .card-media figure {
   width: 100%;
@@ -1039,15 +1120,40 @@ header .image img {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 600px) {
+  .main-content .top {
+    flex-direction: column;
+  }
+  .main-content .top figure {
+    display: flex;
+    justify-content: center;
+  }
+  .main-content .top figure img {
+    max-width: 70%;
+  }
+}
 .main-content .right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
   padding: 15px 0;
 }
+@media only screen and (min-width: 600px) {
+  .main-content .right {
+    align-items: flex-end;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-content .right {
+    align-items: center;
+    margin-top: 30px;
+  }
+  .main-content .right > *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 .main-content .right img {
-  width: 150px;
+  height: 20px;
 }
 .main-content .right p {
   font-style: italic;
@@ -1123,8 +1229,18 @@ header .image img {
 .main-projects {
   padding: 100px 0 100px 100px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-projects {
+    padding: 100px 20px;
+  }
+}
 .main-projects .logo {
   width: 300px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-projects .logo {
+    width: 250px;
+  }
 }
 .main-projects .logo img {
   width: 100%;
@@ -1143,22 +1259,49 @@ header .image img {
   font-style: italic;
   font-size: 35px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-projects .top h2 {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-projects .top img {
+    display: none;
+  }
+}
 .main-projects .media-posts {
   margin-top: 100px;
   padding-bottom: 30px;
 }
-.card-project {
-  width: 480px;
-  display: inline-block;
-  white-space: normal;
-  margin-right: 50px;
-  height: 430px;
+@media only screen and (max-width: 1024px) {
+  .main-projects .media-posts {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .card-project {
+    flex: 0 0 430px;
+    margin-right: 50px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .card-project {
+    width: 100%;
+  }
+  .card-project:not(:last-child) {
+    margin-bottom: 50px;
+  }
 }
 .card-project h3 {
   font-weight: 400;
   letter-spacing: 7px;
   font-size: 25px;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .card-project h3 {
+    font-size: 20px;
+  }
 }
 .card-project figure {
   width: 100%;
@@ -1177,6 +1320,11 @@ header .image img {
   font-weight: 300;
   margin-bottom: 20px;
   line-height: 1.6;
+}
+@media only screen and (max-width: 1024px) {
+  .card-project p {
+    font-size: 16px;
+  }
 }
 .card-project span.text {
   font-style: italic;
@@ -1198,6 +1346,11 @@ header .image img {
   border: none;
   cursor: pointer;
 }
+@media only screen and (max-width: 1024px) {
+  .ui-button {
+    font-size: 18px;
+  }
+}
 .ui-button.read-more {
   background: #f7bd13;
 }
@@ -1208,6 +1361,7 @@ header .image img {
   opacity: 0.85;
 }
 ::-webkit-scrollbar {
+  width: 5px;
   height: 5px;
 }
 ::-webkit-scrollbar-track {

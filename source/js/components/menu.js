@@ -1,4 +1,4 @@
-const small = $(window).width() < 400 ? true : false
+const small = $(window).width() < 1024 ? true : false
 
 $('.open-menu, .open-menu-mobile').on('click', e => {
     if(!$('.main-menu').hasClass('open')) {

@@ -3,14 +3,27 @@
     .top
         display: flex
         justify-content: space-between
+        +below($bp.sm)
+            flex-direction: column
+            figure
+                display flex
+                justify-content: center
+                img
+                    max-width 70%
     .right
         display: flex
         flex-direction: column
         justify-content: space-between
-        align-items: flex-end
         padding: 15px 0
+        +above($bp.sm)
+            align-items: flex-end
+        +below($bp.sm)
+            align-items: center
+            margin-top: 30px
+            > *:not(:last-child)
+                margin-bottom: 10px
         img
-            width: 150px
+            height: 20px
         p
             font-style: italic
             letter-spacing: 5px
