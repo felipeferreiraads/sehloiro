@@ -11,13 +11,17 @@
     .grid
         display flex
         justify-content: space-between
-        +above($bp.sm)
-            align-items: center
+        align-items: center
         +below($bp.sm)
             flex-direction: column
+            justify-content: center
+            .button
+                align-self: center !important
     .logo
         display flex
         align-items: center
+        +below($bp.sm)
+            justify-content: center
         img
             width: 300px
             align-self: flex-start
@@ -62,6 +66,9 @@
         font-style: italic
         +below($bp.md)
             font-size: 20px
+        +below($bp.sm)
+            text-align: center
+            margin-top: 20px
 
 .media-posts
     margin-top 40px
