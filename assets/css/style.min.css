@@ -550,6 +550,9 @@ figure {
   font-weight: 300;
   margin: 30px 0;
 }
+.main-contact h2.main {
+  max-width: 700px;
+}
 @media only screen and (max-width: 600px) {
   .main-contact h2 {
     font-size: 20px;
@@ -744,6 +747,36 @@ figure {
 .main-contact .bottom a {
   margin-top: 7px;
   display: inline-block;
+}
+.main-contact .map {
+  margin: 40px 0;
+}
+.main-contact .map h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 22px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-contact .map h3 {
+    font-size: 16px;
+  }
+}
+.main-contact .map address {
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: 5px;
+  font-weight: 600;
+  margin: 5px 0 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-contact .map address {
+    font-size: 16px;
+  }
+}
+.main-contact .map iframe {
+  width: 100%;
+  height: 400px;
 }
 header {
   width: 140px;
@@ -1422,6 +1455,133 @@ header .image img {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #dba507;
+}
+.main-services {
+  padding: 100px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services {
+    padding: 100px 0 50px;
+  }
+}
+.main-services .logo {
+  width: 300px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services .logo {
+    width: 250px;
+    margin: 0 auto;
+  }
+}
+.main-services .logo img {
+  width: 100%;
+}
+.main-services h2 {
+  font-size: 22px;
+  max-width: 500px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 30px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 30px auto;
+  }
+}
+.main-services .services .item {
+  display: flex;
+}
+.main-services .services .item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services .services .item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main-services .services .item figure {
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  .main-services .services .item figure {
+    border-left: 3px solid #f7bd13;
+  }
+}
+.main-services .services .item figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.main-services .services .text {
+  flex: 1;
+  padding-left: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services .services .text {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+.main-services .services .text h3 {
+  font-size: 35px;
+  letter-spacing: 8px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services .services .text h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+}
+.main-services .interest {
+  margin: 50px 0;
+  font-size: 22px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services .interest {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.main-services .interest a {
+  font-style: italic;
+  font-weight: 600;
+}
+.main-services .interest a:hover {
+  text-decoration: underline;
+}
+.main-services .social {
+  display: flex;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services .social {
+    justify-content: center;
+  }
+}
+.main-services .social a {
+  font-size: 22px;
+  color: #f7bd13;
+}
+.main-services .social a:not(:last-child) {
+  margin-right: 8px;
+}
+.main-services .mail {
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 10px;
+  display: block;
+}
+@media only screen and (max-width: 1024px) {
+  .main-services .mail {
+    text-align: center;
+  }
 }
 .main-about {
   padding: 100px 0;
