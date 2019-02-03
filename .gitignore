@@ -2,3 +2,4 @@
 !spec/*.psd
 node_modules
 yarn.lock
+psd
